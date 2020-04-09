@@ -1,0 +1,74 @@
+{
+    "name": "eslint-config-ascend",
+    "version": "1.0.0",
+    "description": "Ascend's ESLint config for writing clean consistent code",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ascend-innovations/eslint-config-ascend"
+    },
+    "keywords": [
+        "lint",
+        "eslint",
+        "eslintconfig",
+        "config",
+        "ascend",
+        "javascript",
+        "typescript",
+        "eslinttypescript",
+        "tslint",
+        "prettier",
+        "ecmascript"
+    ],
+    "author": "Ascend Innovations (https://ascend-innovations.com)",
+    "contributors": [
+        {
+            "name": "Chris Hahn",
+            "url": "https://github.com/codingwithchris"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ascend-innovations/eslint-config-ascend/issues"
+    },
+    "homepage": "https://github.com/ascend-innovations/eslint-config-ascend",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.27.0",
+        "@typescript-eslint/parser": "^2.27.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-typescript": "^7.2.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-html": "^6.0.1",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.19.0",
+        "eslint-plugin-react-hooks": "^3.0.0",
+        "prettier": "^2.0.4",
+        "typescript": "3.8.3"
+    },
+    "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.27.0",
+        "@typescript-eslint/parser": "^2.27.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-typescript": "^7.2.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-html": "^6.0.1",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.19.0",
+        "eslint-plugin-react-hooks": "^3.0.0",
+        "prettier": "^2.0.4",
+        "typescript": "3.8.3"
+    },
+    "engines": {
+        "node": ">= 10"
+    }
+}

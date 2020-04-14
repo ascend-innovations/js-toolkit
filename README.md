@@ -1,7 +1,8 @@
 # Ascend Innovations • ESLint Config
 ### 📄👌 Ascend's ESLint config for writing clean consistent code.
-
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+
+![](https://github.com/ascend-innovations/eslint-config-ascend/workflows/Publish%20Release%20to%20NPM/badge.svg)
 
 ## Local / Per Project Install
 

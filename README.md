@@ -4,16 +4,27 @@
 
 ![](https://img.shields.io/npm/v/@ascend-innovations/eslint-config) ![](https://github.com/ascend-innovations/eslint-config-ascend/workflows/Publish%20Release%20to%20NPM/badge.svg)
 
+## Current Configuration
+Our ESLint is currently set up out of the box to work for projects that are using the following stack:
+- React
+- Typescript
+- Prettier
+
+We are currently extending the [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript) package. It's built on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) config and it adds Typescript support on top of it. We have future plans to build our own ESLint from the ground up :)
+
 ## Local / Per Project Install
 
 1. If you don't already have a `package.json` file, create one with `npm init`.
 2. Then we need to install everything needed by the config:
 
 For NPM:
-`npx install-peerdeps --dev @ascend/eslint-config`
+`npx install-peerdeps --dev @ascend-innovations/eslint-config -Y`
 
-For Yarn:
-`yar add @ascend/eslint-config --dev --peer`
+For Yarn (npm5+ only):
+```
+npx install-peerdeps --dev @ascend-innovations/eslint-config -Y
+```
+Hey, now!! It automagically works with Yarn too! 🎉🎉🎉
 
 3. You can see in your package.json there are now a big list of devDependencies.
 4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does). Your .eslintrc file should look like this:

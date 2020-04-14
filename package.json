@@ -1,12 +1,13 @@
 {
-    "name": "eslint-config-ascend",
-    "version": "1.0.0",
+    "name": "@ascend/eslint-config",
+    "version": "0.1.0",
     "description": "Ascend's ESLint config for writing clean consistent code",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix"
+    "private": false,
+    "publishConfig": {
+        "access": "public"
     },
+    "license": "MIT",
+    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/ascend-innovations/eslint-config-ascend"
@@ -31,11 +32,15 @@
             "url": "https://github.com/codingwithchris"
         }
     ],
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/ascend-innovations/eslint-config-ascend/issues"
     },
     "homepage": "https://github.com/ascend-innovations/eslint-config-ascend",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix",
+        "test": "echo \"No test specified\""
+    },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.27.0",
         "@typescript-eslint/parser": "^2.27.0",

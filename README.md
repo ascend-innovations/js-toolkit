@@ -21,7 +21,7 @@ For Yarn:
 ```
 {
   "extends": [
-    "@ascend"
+    "@ascend-innovations"
   ]
 }
 ```

@@ -7,7 +7,7 @@ module.exports = {
         // Make compatible with Typescript and only allow .js and .ts as opposed to `.$sx`
         'react/jsx-filename-extension': [
             'error',
-            { extensions: ['.js', '.ts'] },
+            { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
         ],
         'react/jsx-props-no-spreading': 0,
         'react/prop-types': 0,

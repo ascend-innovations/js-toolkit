@@ -1,6 +1,6 @@
 {
     "name": "@ascend-innovations/eslint-config",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Ascend's ESLint config for writing clean consistent code",
     "private": false,
     "publishConfig": {

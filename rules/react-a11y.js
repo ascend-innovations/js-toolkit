@@ -1,4 +1,5 @@
 module.exports = {
+    extends: ['plugins:jsx-a11y/recommended'],
     rules: {
         'jsx-a11y/accessible-emoji': 0,
         'jsx-a11y/href-no-hash': 'off',

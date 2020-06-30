@@ -21,7 +21,7 @@ module.exports = {
         jest: true,
     },
 
-    plugins: ['html'],
+    plugins: ['html', 'jsx-a11y'],
 
     rules: {},
 };

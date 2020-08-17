@@ -19,7 +19,7 @@ module.exports = {
         jest: true,
     },
 
-    plugins: ['html', 'jsx-a11y'],
+    plugins: ['html'],
 
     rules: {},
 };

@@ -48,7 +48,7 @@ For a Vanilla React project
 }
 ```
 
-For a Vanilla JS Typescript project
+For a Vanilla Typescript project
 ```
 {
   "extends": [

@@ -34,7 +34,7 @@ For a Vanilla Javascript project
 ```
 {
   "extends": [
-    "@ascend-innovations/eslint-config/vanilla"
+    "@ascend-innovations/eslint-config/vanilla-js"
   ]
 }
 ```

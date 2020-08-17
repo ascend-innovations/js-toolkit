@@ -27,12 +27,41 @@ npx install-peerdeps --dev @ascend-innovations/eslint-config -Y
 Hey, now!! It automagically works with Yarn too! 🎉🎉🎉
 
 3. You can see in your package.json there are now a big list of devDependencies.
-4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does). Your .eslintrc file should look like this:
+4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does).
+5. Select your desired linting setup when you extend the package.  Your .eslintrc file should look something like this:
 
+For a Vanilla Javascript project
 ```
 {
   "extends": [
-    "@ascend-innovations"
+    "@ascend-innovations/eslint-config/vanilla"
+  ]
+}
+```
+
+For a Vanilla React project
+```
+{
+  "extends": [
+    "@ascend-innovations/eslint-config/vanilla-react"
+  ]
+}
+```
+
+For a Vanilla JS Typescript project
+```
+{
+  "extends": [
+    "@ascend-innovations/eslint-config/vanilla-typescript"
+  ]
+}
+```
+
+For a React Typescript project
+```
+{
+  "extends": [
+    "@ascend-innovations/eslint-config/react-typescript"
   ]
 }
 ```

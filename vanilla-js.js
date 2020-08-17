@@ -3,7 +3,7 @@ module.exports = {
         'eslint-config-airbnb',
         './rules/base',
         './rules/import',
-        './rules/prettier'
+        './rules/prettier',
     ].map(require.resolve),
 
     parser: 'babel-eslint',

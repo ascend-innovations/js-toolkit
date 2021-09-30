@@ -1,0 +1,46 @@
+name: Prod Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    name: 🚀 Release Cycle 📦
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # This project uses Volta to manage yarn and node versions. Using this action will ensure our pinned versions are used.
+      # https://github.com/volta-cli/action
+      - name: Use Volta (pinned Node/Yarn versions)
+        uses: volta-cli/action@v1
+
+      # Frozen lockfile is best for CI/CD + we are ignoring scripts to prevent our "prepare" scripts from running (husky hooks don't work in GH Actions)
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+
+      # ! ALL COMMITS MUST BE SIGNED
+      # ! DO NOT TIE YOUR CI/CD COMMITS TO A PERSON. ALWAYS USE THE ASCEND ENGINEERING USER.
+      # repo: https://github.com/crazy-max/ghaction-import-gpg
+      - name: Import GPG key for signed commits
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v4
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      # Auto-generate CHANGELOG, create tagged release, bump `package.json` version, publish to npm
+      - name: Cut & publish release to npm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_AUTHOR_NAME: ${{ steps.import_gpg.outputs.name }}
+          GIT_AUTHOR_EMAIL: ${{ steps.import_gpg.outputs.email }}
+          GIT_COMMITTER_NAME: ${{ steps.import_gpg.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.import_gpg.outputs.email }}
+        run: yarn multi-semantic-release

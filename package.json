@@ -38,6 +38,7 @@
     ],
     "scripts": {
         "prepare": "./.bin/prepare.sh",
+        "release": "multi-semantic-release",
         "bootstrap": "lerna bootstrap",
         "lint": "eslint .",
         "lint:fix": "eslint --fix",

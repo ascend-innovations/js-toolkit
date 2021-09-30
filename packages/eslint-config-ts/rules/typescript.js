@@ -1,0 +1,38 @@
+module.exports = {
+    rules: {
+         // "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "enum",
+                "format": [
+                    "UPPER_CASE"
+                ]
+            },
+            {
+                "selector": "enumMember",
+                "format": [
+                    "UPPER_CASE"
+                ]
+            },
+            // Enforce that boolean variables are prefixed with an allowed verb
+            {
+                "selector": "variable",
+                "types": [
+                    "boolean"
+                ],
+                "format": [
+                    "PascalCase"
+                ],
+                "prefix": [
+                    "is",
+                    "should",
+                    "has",
+                    "can",
+                    "did",
+                    "will"
+                ]
+            }
+        ]
+    }
+}

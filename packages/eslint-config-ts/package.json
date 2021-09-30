@@ -1,0 +1,85 @@
+{
+    "name": "@ascend-innovations/eslint-config-ts",
+    "version": "0.0.0",
+    "description": "Ascend's base vanilla JS w/ Typescript ESLint config",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ascend-innovations/eslint-config-ascend"
+    },
+    "keywords": [
+        "lint",
+        "eslint",
+        "eslintconfig",
+        "eslintreact",
+        "config",
+        "ascend",
+        "javascript",
+        "react",
+        "typescript",
+        "eslinttypescript",
+        "tslint",
+        "prettier",
+        "ecmascript"
+    ],
+    "author": "Ascend Innovations (https://ascend-innovations.com)",
+    "contributors": [
+        {
+            "name": "Chris Hahn",
+            "url": "https://github.com/codingwithchris"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/ascend-innovations/eslint-config-ascend/issues"
+    },
+    "homepage": "https://github.com/ascend-innovations/eslint-config-ascend",
+    "main": "./index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix",
+        "test": "echo \"No test specified\""
+    },
+    "dependencies": {
+        "@ascend-innovations/eslint-config": "^0.2.1"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.15.7",
+        "@typescript-eslint/eslint-plugin": "^4.32.0",
+        "@typescript-eslint/parser": "^4.32.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-typescript": "^14.0.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-html": "^6.2.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.26.1",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "prettier": "^2.4.1",
+        "typescript": "4.4.3"
+    },
+    "peerDependencies": {
+        "@ascend-innovations/eslint-config": "^0.2.1",
+        "@babel/eslint-parser": "^7.15.7",
+        "@typescript-eslint/eslint-plugin": "^4.32.0",
+        "@typescript-eslint/parser": "^4.32.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-typescript": "^14.0.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-html": "^6.2.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.4.1",
+        "typescript": "^4.4.3"
+    },
+    "volta": {
+        "node": "16.10.0",
+        "yarn": "1.22.11"
+    }
+}

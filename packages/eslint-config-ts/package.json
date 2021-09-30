@@ -43,10 +43,8 @@
         "lint:fix": "eslint --fix",
         "test": "echo \"No test specified\""
     },
-    "dependencies": {
-        "@ascend-innovations/eslint-config": "^0.2.1"
-    },
     "devDependencies": {
+        "@ascend-innovations/eslint-config": "*",
         "@babel/eslint-parser": "^7.15.7",
         "@typescript-eslint/eslint-plugin": "^4.32.0",
         "@typescript-eslint/parser": "^4.32.0",
@@ -64,7 +62,9 @@
         "typescript": "4.4.3"
     },
     "peerDependencies": {
-        "@ascend-innovations/eslint-config": "^0.2.1",
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6",
+        "@ascend-innovations/eslint-config": "*",
         "@babel/eslint-parser": "^7.15.7",
         "@typescript-eslint/eslint-plugin": "^4.32.0",
         "@typescript-eslint/parser": "^4.32.0",
@@ -77,6 +77,26 @@
         "eslint-plugin-prettier": "^4.0.0",
         "prettier": "^2.4.1",
         "typescript": "^4.4.3"
+    },
+    "peerDependenciesMeta": {
+        "eslint-plugin-jsx-a11y": {
+            "optional": true
+        },
+        "eslint-plugin-react": {
+            "optional": true
+        },
+        "eslint-plugin-react-hooks": {
+            "optional": true
+        },
+        "prettier": {
+            "optional": true
+        },
+        "eslint-plugin-prettier": {
+            "optional": true
+        },
+        "eslint-config-prettier": {
+            "optional": true
+        }
     },
     "volta": {
         "node": "16.10.0",

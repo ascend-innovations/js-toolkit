@@ -3,7 +3,7 @@ module.exports = {
     'airbnb',
     './rules/base',
     './rules/import',
-  ].map(require.resolve),
+  ],
 
   plugins: ['html'],
 
@@ -12,5 +12,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
+    requireConfigFile: false
   },
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true
+  }
 };

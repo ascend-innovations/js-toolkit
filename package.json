@@ -42,10 +42,12 @@
         "lint:fix": "eslint --fix",
         "test": "echo \"No test specified\"",
         "clean:nm": "lerna clean && rimraf node_modules",
-        "clean:nuke": "yarn clean:nm && rimraf yarn.lock,node_modules",
+        "clean:nuke": "rimraf yarn.lock && yarn clean:nm",
         "clean:reset": "yarn clean:nuke && yarn install"
     },
     "devDependencies": {
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6",
         "lerna": "^4.0.0",
         "lerna-update-wizard": "^0.17.8",
         "rimraf": "^3.0.2"
@@ -56,5 +58,8 @@
     },
     "workspaces": [
         "packages/*"
-    ]
+    ],
+    "dependencies": {
+        "multi-semantic-release": "^2.9.0"
+    }
 }

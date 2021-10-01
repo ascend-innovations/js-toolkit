@@ -35,17 +35,7 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
 
-      # Auto-generate CHANGELOG, create tagged release, bump `package.json` version, publish to npm
-      - name: Cut & publish release to npm
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GIT_AUTHOR_NAME: ${{ steps.import_gpg.outputs.name }}
-          GIT_AUTHOR_EMAIL: ${{ steps.import_gpg.outputs.email }}
-          GIT_COMMITTER_NAME: ${{ steps.import_gpg.outputs.name }}
-          GIT_COMMITTER_EMAIL: ${{ steps.import_gpg.outputs.email }}
-        run: yarn release
-
+      # Auto-generate CHANGELOG, create tagged release, bump `package.json` version, publish to npm (via changesets)
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@master

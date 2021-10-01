@@ -57,17 +57,10 @@
         "@babel/preset-env": "^7.15.6",
         "@commitlint/cli": "^13.2.0",
         "@commitlint/config-conventional": "^13.2.0",
-        "@semantic-release/changelog": "^6.0.0",
-        "@semantic-release/commit-analyzer": "^9.0.1",
-        "@semantic-release/git": "^10.0.0",
-        "@semantic-release/npm": "^8.0.0",
-        "@semantic-release/release-notes-generator": "^10.0.2",
         "commitizen": "^4.2.4",
         "cz-conventional-changelog": "^3.3.0",
         "husky": "^7.0.2",
         "lerna": "^4.0.0",
-        "lerna-update-wizard": "^0.17.8",
-        "multi-semantic-release": "^2.9.0",
         "rimraf": "^3.0.2"
     },
     "workspaces": [

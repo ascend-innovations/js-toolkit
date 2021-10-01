@@ -1,4 +1,7 @@
-# Ascend Innovations • ESLint Config
+<p align="center">
+  <img src="../../.github/assets/eslint-config.png" />
+</p>
+<br/>
 
 ### 📄👌 Ascend's ESLint config for writing clean consistent code.
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />

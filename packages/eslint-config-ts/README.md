@@ -1,7 +1,7 @@
-Thoughts:
-https://dev.to/tevez07b9/managing-monorepos-with-lerna-and-yarn-workspaces-4bhl
-
-# Ascend Innovations • ESLint Config
+<p align="center">
+  <img src="../../.github/assets/eslint-config-ts.png" />
+</p>
+<br/>
 ### 📄👌 Ascend's ESLint config for writing clean consistent code.
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 

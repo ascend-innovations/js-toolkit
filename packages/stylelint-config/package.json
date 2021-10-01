@@ -1,0 +1,46 @@
+{
+    "name": "@ascend-innovations/stylelint-config",
+    "version": "0.0.0",
+    "description": "Ascend's shareable Stylelint config",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ascend-innovations/js-toolkit"
+    },
+    "author": "Ascend Innovations (https://ascend-innovations.com)",
+    "contributors": [
+        {
+            "name": "Chris Hahn",
+            "url": "https://github.com/codingwithchris"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/ascend-innovations/js-toolkit/issues"
+    },
+    "homepage": "https://github.com/ascend-innovations/js-toolkit",
+    "main": "./index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix",
+        "test": "echo \"No test specified\""
+    },
+    "dependencies": {
+        "stylelint-config-recommended": "^5.0.0",
+        "stylelint-declaration-use-variable": "^1.7.3",
+        "stylelint-order": "^4.1.0"
+    },
+    "devDependencies": {
+        "stylelint": "^13.13.1"
+    },
+    "peerDependencies": {
+        "stylelint": "^13.13.1"
+    },
+    "volta": {
+        "node": "16.10.0",
+        "yarn": "1.22.11"
+    }
+}

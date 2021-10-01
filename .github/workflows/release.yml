@@ -1,6 +1,10 @@
 name: Release
 on:
   push:
+    paths:
+      - ".github/**"
+      - ".changeset/**"
+      - "packages/**"
     branches:
       - main
 jobs:
@@ -21,7 +25,7 @@ jobs:
 
       # Frozen lockfile is best for CI/CD + we are ignoring scripts to prevent our "prepare" scripts from running (husky hooks don't work in GH Actions)
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --ignore-scripts
+        run: yarn install --frozen-lockfile --ignore-scripts && yarn bootstrap
 
       # ! ALL COMMITS MUST BE SIGNED
       # ! DO NOT TIE YOUR CI/CD COMMITS TO A PERSON. ALWAYS USE THE ASCEND ENGINEERING USER.
@@ -42,6 +46,7 @@ jobs:
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: yarn release
+          commit: "chore(release): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

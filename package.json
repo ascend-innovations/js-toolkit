@@ -38,7 +38,8 @@
     ],
     "scripts": {
         "prepare": "./.bin/prepare.sh",
-        "bootstrap": "lerna bootstrap",
+        "commit": "git-cz",
+        "bootstrap": "lerna bootstrap --use-workspaces",
         "lint": "eslint .",
         "lint:fix": "eslint --fix",
         "test": "echo \"No test specified\"",

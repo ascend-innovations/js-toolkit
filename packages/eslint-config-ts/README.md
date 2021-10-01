@@ -1,21 +1,19 @@
 <p align="center">
-  <img src="../../.github/assets/eslint-config.png" />
+  <img src="../../.github/assets/eslint-config-ts.png" />
 </p>
 <br/>
-
 ### 📄👌 Ascend's ESLint config for writing clean consistent code.
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 
-## Inspiration
-[10up ESLint Config](https://github.com/10up/10up-toolkit/tree/develop/packages/eslint-config)
+![](https://img.shields.io/npm/v/@ascend-innovations/eslint-config) ![](https://github.com/ascend-innovations/eslint-config-ascend/workflows/Publish%20Release%20to%20NPM/badge.svg)
+
 ## Current Configuration
 Our ESLint is currently set up out of the box to work for projects that are using the following stack:
-- VanillaJS
+- React
+- Typescript
 - Prettier
-- Node
-- Jest
 
-We are currently extending the [eslint-config-airbnb-base](https://github.com/iamturns/eslint-config-airbnb-typescript) package. It's built on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) config and it adds Typescript support on top of it. We have future plans to build our own ESLint from the ground up :)
+We are currently extending the [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript) package. It's built on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) config and it adds Typescript support on top of it. We have future plans to build our own ESLint from the ground up :)
 
 ## Local / Per Project Install
 

@@ -9,23 +9,8 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ascend-innovations/eslint-config-ascend"
+        "url": "https://github.com/ascend-innovations/js-toolkit"
     },
-    "keywords": [
-        "lint",
-        "eslint",
-        "eslintconfig",
-        "eslintreact",
-        "config",
-        "ascend",
-        "javascript",
-        "react",
-        "typescript",
-        "eslinttypescript",
-        "tslint",
-        "prettier",
-        "ecmascript"
-    ],
     "author": "Ascend Innovations (https://ascend-innovations.com)",
     "contributors": [
         {
@@ -34,9 +19,9 @@
         }
     ],
     "bugs": {
-        "url": "https://github.com/ascend-innovations/eslint-config-ascend/issues"
+        "url": "https://github.com/ascend-innovations/js-toolkit/issues"
     },
-    "homepage": "https://github.com/ascend-innovations/eslint-config-ascend",
+    "homepage": "https://github.com/ascend-innovations/js-toolkit",
     "main": "./index.js",
     "scripts": {
         "lint": "eslint .",

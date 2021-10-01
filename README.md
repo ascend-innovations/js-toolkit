@@ -1,137 +1,72 @@
-Thoughts:
-https://dev.to/tevez07b9/managing-monorepos-with-lerna-and-yarn-workspaces-4bhl
+<p align="center">
+  <img src="./.github/assets/js-toolkit.png" />
+</p>
 
-# Ascend Innovations • ESLint Config
-### 📄👌 Ascend's ESLint config for writing clean consistent code.
-<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+<p align="center">
+  A collection of tools for building javascript projects at Ascend.
+</p>
+<br/>
 
-![](https://img.shields.io/npm/v/@ascend-innovations/eslint-config) ![](https://github.com/ascend-innovations/eslint-config-ascend/workflows/Publish%20Release%20to%20NPM/badge.svg)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![](https://github.com/ascend-innovations/js-toolkit/workflows/Release/badge.svg)
 
-## Current Configuration
-Our ESLint is currently set up out of the box to work for projects that are using the following stack:
-- React
-- Typescript
-- Prettier
+## Published Tools
+- [@ascend-innovations/eslint-config](https://github.com/ascend-innovations/js-toolkit/blob/main/packages/eslint-config)
+- [@ascend-innovations/eslint-config-ts](https://github.com/ascend-innovations/js-toolkit/tree/main/packages/eslint-config-ts)
+- [@ascend-innovations/stylelint](https://github.com/ascend-innovations/js-toolkit/tree/main/packages/stylelint-config)
 
-We are currently extending the [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript) package. It's built on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) config and it adds Typescript support on top of it. We have future plans to build our own ESLint from the ground up :)
+> More tools will be worked and published in the near future!
 
-## Local / Per Project Install
+## Repo Toolchain
+A list of tooling used in this monorepo along with the reasoning behind it. Look at these like mini ADRs.
 
-1. If you don't already have a `package.json` file, create one with `npm init`.
-2. Then we need to install everything needed by the config:
+### Node & Package Manager version pinning managed by Volta
 
-For NPM:
-`npx install-peerdeps --dev @ascend-innovations/eslint-config -Y`
+- [View Volta website & docs](https://volta.sh/)
 
-For Yarn (npm5+ only):
-```
-npx install-peerdeps --dev @ascend-innovations/eslint-config -Y
-```
-Hey, now!! It automagically works with Yarn too! 🎉🎉🎉
+Volta is an alternative to `nvm` and has been far more reliable in my experience. If it's used my multiple devs across projects,
+it virtually eliminates node or yarn version issues. Check out the site to install & configure.
 
-3. You can see in your package.json there are now a big list of devDependencies.
-4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does).
-5. Select your desired linting setup when you extend the package.  Your .eslintrc file should look something like this:
+Yarn and Node versions for this project are specified in `package.json` in the `volta` key.
 
-For a Vanilla Javascript project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/vanilla-js"
-  ]
-}
-```
+### Package Management via Yarn
 
-For a Vanilla React project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/vanilla-react"
-  ]
-}
-```
+**Using [Yarn 1](https://classic.yarnpkg.com/lang/en/)**\
+Why Yarn 1 instead of Yarn 2? Well... at first glance yarn 2 unfortunately doesn't work with any
+sort of conventional commit tooling :/
 
-For a Vanilla Typescript project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/vanilla-typescript"
-  ]
-}
-```
+Why use Yarn instead of NPM? I still really like yarn workspaces far more than anything NPM offers. We aren't using them
+right now, but in the future there could be a reason to make this a monorepo. Also, I really like running `yarn <command>`
+as opposed to `npm run <command>`. And finally, Yarn's resolutions are really nice in a pinch.
 
-For a React Typescript project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/react-typescript"
-  ]
-}
-```
+### We require Conventional Commits
 
-Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig"`:. This makes one less file in your project.
+Conventional commits are really great for improving commit clarity. They also help us in the release process by allowing us
+to automate changelog generation and take full advantage of semantic releases.
 
-5. You can add two scripts to your package.json to lint and/or fix:
+- [View Conventional Commit spec](https://www.conventionalcommits.org/en/v1.0.0/)
 
-```
-"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
-},
-```
+### Conventional Commits CLI to help write better commits
 
-6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`.
+The Commitizen CLI helps you write conventional commits by taking you through a commit prompt so you don't have to memorize the Conventional Commit spec.
 
-## With VS Code
+- [View Github repo](https://github.com/commitizen/cz-cli)
+- [View website & docs](http://commitizen.github.io/cz-cli/)
 
-We highly recommend configuring your editor to do this automatically on file save across your whole project.
+Using the CLI is totally optional and is a great option for anyone new to conventional commit. You can engage the CLI prompt by running `git cz` or instead of `git commit`
 
-1. Install the [ESLint plugin for VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-2. Create a file in your current project in `.vscode/settings.json`.
+### Linter to enforce Conventional Commits
 
-3. Place the following configuration in the file:
-```
-{
-    //
-    // Auto-run code formatting on save
-    //
-    "editor.formatOnSave": true,
-    // Tell the ESLint plugin to run on save
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    // The following prevents linting from running twice
-    // turn it off for JS and JSX, we will do this via eslint
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": false
-    },
-    // Turn it off for TS & TSX
-    "[typescript]": {
-        "editor.formatOnSave": false
-    },
-    "[typescriptreact]": {
-        "editor.formatOnSave": false
-    },
-}
-```
+Commit linting will automatically run when you attempt to make a commit and will tell you if you have any syntax errors in your commit that break the conventional commit spec. This helps prevent bad commits from slipping through the cracks.
 
-4. In order to ensure there are no conflicts between Prettier and ESLint with any plugins you may have active in your VSCode editor, we also recommend adding a file at `.vscode/extensions.json` with the following content:
-```
-{
-    // See http://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
-    // List of extensions which should be recommended for users of this workspace.
-    "recommendations": [
-        "dbaeumer.vscode-eslint"
-    ],
-    // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
-    "unwantedRecommendations": [
-        "esbenp.prettier-vscode", // You don't need the prettier extension with this setup
-        "editorconfig.editorconfig", // You don't need editor config with this setup
-    ]
-}
-```
+_Linting on commit messages is orchestrated via husky_
 
-This will make sure that anyone working on the project is aware of enabling/disabling proper extensions!
+- [View Github repo](https://github.com/conventional-changelog/commitlint)
+- [View website & docs](https://conventional-changelog.github.io/commitlint/)
+
+### Package releases and publishing managed with Changesets
+Created by Atlassian, Changesets is a tool to manage versioning and changelogs with a focus on multi-package repositories. It's based on the principles of `semver`.
+
+- [View Github repo](https://github.com/atlassian/changesets)
+- [View semver spec](https://semver.org/)
+
+We've tried [semantic release](https://github.com/semantic-release/semantic-release) to manage monorepos but changesets just makes it 10x easier 🎉

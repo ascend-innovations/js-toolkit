@@ -4,10 +4,5 @@
     "packages/*"
   ],
   "npmClient": "yarn",
-  "useWorkspaces": true,
-  "commands" : {
-    "publish": {
-      "conventionalCommits": true
-    }
-  }
+  "useWorkspaces": true
 }

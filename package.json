@@ -1,7 +1,7 @@
 {
     "name": "ascend-eslint-configs",
     "version": "0.0.0-monorepo-root",
-    "description": "Ascend's ESLint config for writing clean, consistent code",
+    "description": "A collection of tools for building javascript projects at Ascend.",
     "private": true,
     "license": "MIT",
     "repository": {
@@ -40,12 +40,12 @@
         "prepare": "./.bin/prepare.sh",
         "commit": "git-cz",
         "bootstrap": "lerna bootstrap --use-workspaces",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix",
+        "lint": "lerna run lint",
+        "lint:fix": "lerna run lint:fix",
         "test": "echo \"No test specified\"",
         "clean:nm": "lerna clean && rimraf node_modules",
         "clean:husky": "rimraf .husky",
-        "clean:nuke": "rimraf yarn.lock && && yarn clean:husky && yarn clean:nm",
+        "clean:nuke": "rimraf yarn.lock && yarn clean:husky && yarn clean:nm",
         "clean:reset": "yarn clean:nuke && yarn install",
         "release": "changeset publish"
     },

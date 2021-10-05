@@ -24,20 +24,19 @@
     "homepage": "https://github.com/ascend-innovations/js-toolkit",
     "main": "./index.js",
     "scripts": {
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix",
         "test": "echo \"No test specified\""
     },
-    "dependencies": {
+    "devDependencies": {
+        "stylelint": "^13.13.1",
         "stylelint-config-recommended": "^5.0.0",
         "stylelint-declaration-use-variable": "^1.7.3",
         "stylelint-order": "^4.1.0"
     },
-    "devDependencies": {
-        "stylelint": "^13.13.1"
-    },
     "peerDependencies": {
-        "stylelint": "^13.13.1"
+        "stylelint": "^13.13.1",
+        "stylelint-config-recommended": "^5.0.0",
+        "stylelint-declaration-use-variable": "^1.7.3",
+        "stylelint-order": "^4.1.0"
     },
     "volta": {
         "node": "16.10.0",

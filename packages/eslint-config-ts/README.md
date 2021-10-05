@@ -1,86 +1,108 @@
 <p align="center">
-  <img src="../../.github/assets/eslint-config-ts.png" />
+  <img src="../../.github/assets/eslint-config.png" />
+</p>
+<p align="center">
+  Ascend's ESLint config for writing clean consistent code in Typescript projects 👌
 </p>
 <br/>
-### 📄👌 Ascend's ESLint config for writing clean consistent code.
-<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 
-![](https://img.shields.io/npm/v/@ascend-innovations/eslint-config) ![](https://github.com/ascend-innovations/eslint-config-ascend/workflows/Publish%20Release%20to%20NPM/badge.svg)
+<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/eslint-config-ts" title="View this project on NPM"><img src="https://img.shields.io/npm/v/badges.svg" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
 
-## Current Configuration
-Our ESLint is currently set up out of the box to work for projects that are using the following stack:
-- React
-- Typescript
-- Prettier
+## Current Support
+Currently this package provides Typescript configurations for:
+- Typescript vanilla JS
+- Typescript React
+- Typescript Node
+- Typescript Jest
 
-We are currently extending the [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript) package. It's built on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) config and it adds Typescript support on top of it. We have future plans to build our own ESLint from the ground up :)
+## Non-Typescript Rule Definitions
+This package extends all of the rules defined in our core `eslint-config` package, [`@ascend-innovations/eslint-config`](https://www.npmjs.com/package/@ascend-innovations/eslint-config). The only difference is that it adds overrides that define rules & handling for typescript files.
 
-## Local / Per Project Install
+## Installing
+1. Put a `.eslintrc` (or any [valid eslint config file](https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats)) in your project root
+2. You can alternatively put the config in your `package.json` under the property `"eslintConfig"`:. This makes one less file in your project.
+3. Be sure your to have a valid `tsconfig.json` configured for your project.
+4. Install dependencies and select the configuration you want (available configs listed below)
 
-1. If you don't already have a `package.json` file, create one with `npm init`.
-2. Then we need to install everything needed by the config:
+### Default Vanilla JS Configuration
+The default install will install all required *AND* optional dependencies. You can safely remove the following packages without triggering a peer dependency warning if you aren't consuming the associated configs:
+- `react`
+  - `eslint-config-airbnb`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y`
+- `jest`
+  - `eslint-plugin-jest`
 
-For NPM:
-`npx install-peerdeps --dev @ascend-innovations/eslint-config -Y`
-
-For Yarn (npm5+ only):
-```
-npx install-peerdeps --dev @ascend-innovations/eslint-config -Y
-```
-Hey, now!! It automagically works with Yarn too! 🎉🎉🎉
-
-3. You can see in your package.json there are now a big list of devDependencies.
-4. Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does).
-5. Select your desired linting setup when you extend the package.  Your .eslintrc file should look something like this:
-
-For a Vanilla Javascript project
+*Install it with NPM:* `npx install-peerdeps --dev @ascend-innovations/eslint-config-ts`
+*Install it with Yarn:* `npx install-peerdeps --dev @ascend-innovations/eslint-config-ts -Y`
+*Use it:*
 ```
 {
   "extends": [
-    "@ascend-innovations/eslint-config/vanilla-js"
+    "@ascend-innovations/eslint-config-ts"
+  ]
+}
+```
+*Notes:*
+- This install will install optional peer dependencies as well. If you aren't using `react` or `jest`, you can remove the following packages without triggering a peer dependency warning:
+  - `eslint-config-airbnb`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y`
+- Extends [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+- Prettier is always on (configured & enabled by default)
+
+### React Configuration
+*Use it:*
+```
+{
+  "extends": [
+    "@ascend-innovations/eslint-config-ts/react"
+  ]
+}
+```
+*Notes:*
+- Extends [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+- Prettier is always on (configured & enabled by default)
+
+### Node Configuration
+*Use it:*
+```
+{
+  "extends": [
+    "@ascend-innovations/eslint-config-ts/node"
+  ]
+}
+```
+*Notes:*
+- Extends [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+- Prettier is always on (configured & enabled by default)
+
+### Add Jest Support
+You can add Jest support to any project:
+```
+{
+  "extends": [
+    "@ascend-innovations/eslint-config-ts/jest"
   ]
 }
 ```
 
-For a Vanilla React project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/vanilla-react"
-  ]
-}
-```
+## Set Up Project Lint Scripts
+Add two scripts to your package.json to lint and/or fix:
 
-For a Vanilla Typescript project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/vanilla-typescript"
-  ]
-}
-```
-
-For a React Typescript project
-```
-{
-  "extends": [
-    "@ascend-innovations/eslint-config/react-typescript"
-  ]
-}
-```
-
-Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig"`:. This makes one less file in your project.
-
-5. You can add two scripts to your package.json to lint and/or fix:
-
+*Non-React projects:*
 ```
 "scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
+  "lint": "eslint . --ext .js,.ts",
+  "lint:fix": "eslint . --ext .js,.ts --fix"
 },
 ```
 
-6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`.
+*React projects:*
+```
+"scripts": {
+  "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+  "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix"
+},
+```
+
+Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`.
 
 ## With VS Code
 
@@ -88,33 +110,32 @@ We highly recommend configuring your editor to do this automatically on file sav
 
 1. Install the [ESLint plugin for VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 2. Create a file in your current project in `.vscode/settings.json`.
-
 3. Place the following configuration in the file:
 ```
 {
+    // show eslint icon at bottom toolbar
+    "eslint.alwaysShowStatus": true,
+
     //
     // Auto-run code formatting on save
     //
     "editor.formatOnSave": true,
+
     // Tell the ESLint plugin to run on save
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+
     // The following prevents linting from running twice
     // turn it off for JS and JSX, we will do this via eslint
     "[javascript]": {
         "editor.formatOnSave": false
     },
+
     "[javascriptreact]": {
         "editor.formatOnSave": false
     },
-    // Turn it off for TS & TSX
-    "[typescript]": {
-        "editor.formatOnSave": false
-    },
-    "[typescriptreact]": {
-        "editor.formatOnSave": false
-    },
+
 }
 ```
 

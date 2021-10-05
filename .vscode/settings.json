@@ -9,7 +9,8 @@
     "editor.formatOnSave": true,
     // Tell the ESLint plugin to run on save
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
     },
     // The following prevents linting from running twice
     // turn it off for JS and JSX, we will do this via eslint
@@ -28,4 +29,9 @@
     },
     // show eslint icon at bottom toolbar
     "eslint.alwaysShowStatus": true,
+
+    // Stylelint setup with VSCode: https://github.com/stylelint/vscode-stylelint
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false
 }

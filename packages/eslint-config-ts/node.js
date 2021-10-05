@@ -1,7 +1,7 @@
 module.exports = {
-    extends: ['./index'],
-    plugins: [],
+    extends: [require.resolve('./index')],
     env: {
+        browser: false,
         es6: true,
         node: true,
     },

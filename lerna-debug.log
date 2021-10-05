@@ -1,0 +1,21 @@
+0 silly argv {
+0 silly argv   _: [ 'clean' ],
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': '/Users/chahn/projects/ascend/ai-js-toolkit/node_modules/.bin/lerna'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/chahn/projects/ascend/ai-js-toolkit
+3 info versioning independent
+4 error JSONError: Unexpected token "}" (0x7D) in JSON at position 938 while parsing near "...der\": \"^4.1.0\",\n    },\n    \"devDependenc..." in packages/stylelint-config/package.json
+4 error
+4 error [0m [90m 30 |[39m         [32m"stylelint-declaration-strict-value"[39m[33m:[39m [32m"^1.7.12"[39m[33m,[39m[0m
+4 error [0m [90m 31 |[39m         [32m"stylelint-order"[39m[33m:[39m [32m"^4.1.0"[39m[33m,[39m[0m
+4 error [0m[31m[1m>[22m[39m[90m 32 |[39m     }[33m,[39m[0m
+4 error [0m [90m    |[39m     [31m[1m^[22m[39m[0m
+4 error [0m [90m 33 |[39m     [32m"devDependencies"[39m[33m:[39m {[0m
+4 error [0m [90m 34 |[39m         [32m"stylelint"[39m[33m:[39m [32m"^13.13.1"[39m[33m,[39m[0m
+4 error [0m [90m 35 |[39m         [32m"stylelint-config-recommended"[39m[33m:[39m [32m"^5.0.0"[39m[0m
+4 error
+4 error     at parseJson (/Users/chahn/projects/ascend/ai-js-toolkit/node_modules/parse-json/index.js:29:21)
+4 error     at parse (/Users/chahn/projects/ascend/ai-js-toolkit/node_modules/load-json-file/index.js:15:9)
+4 error     at module.exports (/Users/chahn/projects/ascend/ai-js-toolkit/node_modules/load-json-file/index.js:18:47)

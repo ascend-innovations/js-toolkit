@@ -1,5 +1,13 @@
 # @ascend-innovations/eslint-config-ts
 
+## 1.0.2
+
+### Patch Changes
+
+- f92d0bc: Add @babel/core as a dev and peer dependency. It's required in order for linting to work
+- Updated dependencies [f92d0bc]
+  - @ascend-innovations/eslint-config@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes

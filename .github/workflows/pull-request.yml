@@ -1,0 +1,25 @@
+name: Pull Request Validation
+on:
+  pull_request
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+        # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
+
+      # This project uses Volta to manage yarn and node versions. Using this action will ensure our pinned versions are used.
+      # https://github.com/volta-cli/action
+      - name: Use Volta (pinned Node/Yarn versions)
+        uses: volta-cli/action@v1
+
+      # Frozen lockfile is best for CI/CD + we are ignoring scripts to prevent our "prepare" scripts from running (husky hooks don't work in GH Actions)
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+
+      - name: Run Tests
+        run: yarn test

@@ -23,7 +23,8 @@ module.exports = {
             'vh',
             'vw',
             'fr'
-        ]
+        ],
+        'indentation': 4
     },
     ignoreFiles: ['node_modules']
 }

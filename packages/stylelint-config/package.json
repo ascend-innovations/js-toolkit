@@ -1,6 +1,6 @@
 {
     "name": "@ascend-innovations/stylelint-config",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "Ascend's shareable Stylelint config",
     "private": false,
     "publishConfig": {
@@ -24,14 +24,14 @@
     "homepage": "https://github.com/ascend-innovations/js-toolkit",
     "main": "./index.js",
     "scripts": {
-        "lint:css": "yarn stylelint **/*.css",
-        "lint:css:fix": "yarn stylelint **/*.css --fix",
-        "test": "echo \"No test specified\""
+        "lint": "yarn stylelint **/*.css",
+        "lint:fix": "yarn stylelint **/*.css --fix",
+        "test": "yarn stylelint __tests__/test.css"
     },
     "dependencies": {
+        "stylelint-config-standard": "^22.0.0",
         "stylelint-declaration-strict-value": "^1.7.12",
-        "stylelint-order": "^4.1.0",
-        "stylelint-config-standard": "^22.0.0"
+        "stylelint-order": "^4.1.0"
     },
     "devDependencies": {
         "stylelint": "^13.13.1"

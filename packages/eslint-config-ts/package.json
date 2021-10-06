@@ -26,13 +26,18 @@
     "scripts": {
         "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
         "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
-        "test": "echo \"No test specified\""
+        "test:js": "eslint __tests__/test.js",
+        "test:js:react": "eslint __tests__/test.jsx --config ./react.js",
+        "test:ts": "eslint __tests__/test.ts",
+        "test:ts:react": "eslint __tests__/test.tsx --config ./react.js",
+        "test": "yarn test:js && yarn test:js:react && yarn test:ts && yarn test:ts:react"
     },
     "dependencies": {
         "@ascend-innovations/eslint-config": "^1.0.0"
     },
     "devDependencies": {
         "@babel/eslint-parser": "^7.15.7",
+        "@babel/preset-react": "^7.14.5",
         "@typescript-eslint/eslint-plugin": "^4.32.0",
         "@typescript-eslint/parser": "^4.32.0",
         "eslint": "^7.32.0",

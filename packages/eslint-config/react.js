@@ -15,6 +15,7 @@ module.exports = {
         requireConfigFile: false,
         babelOptions: {
             rootMode: 'upward-optional',
+            presets: ['@babel/preset-react'],
         },
         ecmaFeatures: {
             jsx: true,

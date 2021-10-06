@@ -1,0 +1,30 @@
+--base-font-size: 1rem;
+--black: #000000;
+--bg: #000000;
+--padding: 24px;
+--size: 16px;
+--font-margin: 4px;
+--base-index: 1;
+
+html {
+    background-color: var(--bg);
+    font-size: var(--base-font-size);
+}
+
+div {
+    color: var(--black);
+    display: inherit;
+    height: 100vw;
+    padding: var(--padding);
+    transition: 0.2s all;
+    width: 100vw;
+    z-index: var(--base-index);
+}
+
+p {
+    color: currentColor;
+    font-size: var(--size);
+    margin-bottom: var(--font-margin);
+    max-width: 500px;
+    width: 100%;
+}

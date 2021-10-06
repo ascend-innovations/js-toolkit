@@ -7,7 +7,6 @@ module.exports = {
             files: '**/*.+(ts|tsx)', // Apply overrides for typescript files only
             parser: '@typescript-eslint/parser',
             extends: [
-                '@ascend-innovations/eslint-config/react',
                 'airbnb-typescript',
                 'plugin:@typescript-eslint/recommended',
                 require.resolve('./rules/typescript'),

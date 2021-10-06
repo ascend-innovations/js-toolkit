@@ -1,15 +1,11 @@
-name: Release
+name: Pull Request Valdiation
 on:
-  push:
-    paths:
-      - ".github/**"
-      - ".changeset/**"
-      - "packages/**"
+  pull_request:
     branches:
       - main
 jobs:
   release:
-    name: 🚀 Release Cycle 📦
+    name: Validation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

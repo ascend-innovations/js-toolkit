@@ -1,11 +1,11 @@
-name: Pull Request Valdiation
+name: Pull Request Validation
 on:
   pull_request:
     branches:
       - main
 jobs:
-  release:
-    name: Validation
+  validate:
+    name: Validate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -23,26 +23,5 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile --ignore-scripts
 
-      # ! ALL COMMITS MUST BE SIGNED
-      # ! DO NOT TIE YOUR CI/CD COMMITS TO A PERSON. ALWAYS USE THE ASCEND ENGINEERING USER.
-      # repo: https://github.com/crazy-max/ghaction-import-gpg
-      - name: Import GPG key for signed commits
-        id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v4
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-
-      # Auto-generate CHANGELOG, create tagged release, bump `package.json` version, publish to npm (via changesets)
-      - name: Create Release Pull Request or Publish to NPM
-        id: changesets
-        uses: changesets/action@master
-        with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: yarn release
-          commit: "chore(release): version packages"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Run Tests
+        run: yarn test

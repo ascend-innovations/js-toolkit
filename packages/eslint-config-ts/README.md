@@ -6,7 +6,7 @@
 </p>
 <br/>
 
-<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/eslint-config-ts" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@ascend-innovations/eslint-config-ts.sv" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
+<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/eslint-config-ts" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@ascend-innovations/eslint-config-ts.svg" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
 
 ## Current Support
 Currently this package provides Typescript configurations for:

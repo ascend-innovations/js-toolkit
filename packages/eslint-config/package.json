@@ -1,6 +1,6 @@
 {
     "name": "@ascend-innovations/eslint-config",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Ascend's base vanilla JS ESLint config",
     "private": false,
     "publishConfig": {

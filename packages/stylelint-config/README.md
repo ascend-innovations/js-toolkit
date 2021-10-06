@@ -6,11 +6,11 @@
 </p>
 <br/>
 
-<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/stylelint-config" title="View this project on NPM"><img src="https://img.shields.io/npm/v/badges.svg" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
+<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/stylelint-config" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@ascend-innovations/stylelint-config.sv" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
 
 ## Install
-*Install it with NPM:* `npx install-peerdeps --dev @ascend-innovations/stylelint-config`
-*Install it with Yarn:* `npx install-peerdeps --dev @ascend-innovations/stylelint-config -Y`
+*Install it with NPM:* `npx install-peerdeps --dev @ascend-innovations/stylelint-config`\
+*Install it with Yarn:* `npx install-peerdeps --dev @ascend-innovations/stylelint-config -Y`\
 
 ## Use
 1. Create a `.stylelintrc` file in your project root

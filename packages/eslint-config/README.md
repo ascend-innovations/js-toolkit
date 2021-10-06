@@ -6,7 +6,7 @@
 </p>
 <br/>
 
-<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/eslint-config" title="View this project on NPM"><img src="https://img.shields.io/npm/v/badges.svg" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
+<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@ascend-innovations/eslint-config" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@ascend-innovations/eslint-config.svg" alt="NPM version" /></a></span> <img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs welcome!" />
 
 ## Current Support
 Currently this package provides configurations for:
@@ -27,8 +27,8 @@ The default install will install all required *AND* optional dependencies. You c
 - `jest`
   - `eslint-plugin-jest`
 
-*Install it with NPM:* `npx install-peerdeps --dev @ascend-innovations/eslint-config`
-*Install it with Yarn:* `npx install-peerdeps --dev @ascend-innovations/eslint-config -Y`
+*Install it with NPM:* `npx install-peerdeps --dev @ascend-innovations/eslint-config`\
+*Install it with Yarn:* `npx install-peerdeps --dev @ascend-innovations/eslint-config -Y`\
 *Use it:*
 ```
 {

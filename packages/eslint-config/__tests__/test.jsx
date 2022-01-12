@@ -7,5 +7,5 @@
  */
 
 export const test = (text) => {
-    return <>{text}</>;
+    return <div>{text}</div>;
 };

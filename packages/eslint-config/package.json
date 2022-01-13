@@ -28,7 +28,8 @@
         "lint:fix": "eslint --fix",
         "test:js": "eslint __tests__/test.js",
         "test:js:react": "eslint __tests__/test.jsx --config ./react.js",
-        "test": "yarn test:js && yarn test:js:react"
+        "test:js:svelte": "eslint __tests__/test.svelte --config ./svelte.js",
+        "test": "yarn test:js && yarn test:js:react && yarn test:js:svelte"
     },
     "devDependencies": {
         "@babel/core": "^7.15.5",
@@ -80,13 +81,18 @@
         },
         "eslint-plugin-jest": {
             "optional": true
+        },
+        "eslint-plugin-svelte3": {
+            "optional": true
         }
     },
     "volta": {
         "node": "16.10.0",
         "yarn": "1.22.11"
     },
-    "workspaces": [
-        "*/packages"
-    ]
+    "dependencies": {
+        "eslint-plugin-svelte3": "^3.4.0",
+        "svelte": "^3.46.1",
+        "svelte-check": "^2.3.0"
+    }
 }

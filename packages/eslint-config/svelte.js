@@ -1,0 +1,21 @@
+module.exports = {
+    extends: [
+        'eslint:recommended',
+        require.resolve('./rules/base'),
+        require.resolve('./rules/import'),
+        require.resolve('./rules/prettier'),
+    ],
+    parser: '@babel/eslint-parser',
+    parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+        requireConfigFile: false,
+    },
+    overrides: [
+        {
+            files: ['**/*.svelte'],
+            processor: 'svelte3/svelte3',
+        },
+    ],
+    plugins: ['svelte3'],
+};

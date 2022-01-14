@@ -1,5 +1,11 @@
 # @ascend-innovations/stylelint-config
 
+## 1.0.1
+
+### Patch Changes
+
+- bce8e5f: Add correct NPM Badge to package READMEs
+
 ## 1.0.0
 
 ### Major Changes

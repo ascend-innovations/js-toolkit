@@ -1,5 +1,19 @@
 # @ascend-innovations/eslint-config-ts
 
+## 2.0.0
+
+### Minor Changes
+
+- 08293c4: Add ESLint support for Svelte
+
+### Patch Changes
+
+- bce8e5f: Add correct NPM Badge to package READMEs
+- Updated dependencies [08293c4]
+- Updated dependencies [bce8e5f]
+- Updated dependencies [08293c4]
+  - @ascend-innovations/eslint-config@1.1.0
+
 ## 1.0.2
 
 ### Patch Changes

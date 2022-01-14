@@ -1,6 +1,6 @@
 module.exports = {
     extends: [
-        'eslint:recommended',
+        'airbnb-base',
         require.resolve('./rules/base'),
         require.resolve('./rules/import'),
         require.resolve('./rules/prettier'),

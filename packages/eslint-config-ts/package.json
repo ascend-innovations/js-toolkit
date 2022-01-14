@@ -30,7 +30,8 @@
         "test:js:react": "eslint __tests__/test.jsx --config ./react.js",
         "test:ts": "eslint __tests__/test.ts",
         "test:ts:react": "eslint __tests__/test.tsx --config ./react.js",
-        "test": "yarn test:js && yarn test:js:react && yarn test:ts && yarn test:ts:react"
+        "test:ts:svelte": "eslint __tests__/test.svelte --config ./svelte.js",
+        "test": "yarn test:js && yarn test:js:react && yarn test:ts && yarn test:ts:react && yarn test:ts:svelte"
     },
     "dependencies": {
         "@ascend-innovations/eslint-config": "^1.0.2"
@@ -54,7 +55,9 @@
         "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
         "prettier": "^2.4.1",
-        "typescript": "4.4.3"
+        "typescript": "4.4.3",
+        "eslint-plugin-svelte3": "^3.4.0",
+        "svelte": "^3.46.1"
     },
     "peerDependencies": {
         "@ascend-innovations/eslint-config": "^1.0.2",

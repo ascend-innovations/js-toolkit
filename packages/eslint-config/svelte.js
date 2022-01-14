@@ -5,20 +5,17 @@ module.exports = {
         require.resolve('./rules/import'),
         require.resolve('./rules/prettier'),
     ],
-    ignorePatterns: ['*.cjs'],
-
     parser: '@babel/eslint-parser',
-
     parserOptions: {
-        ecmaVersion: 2021,
+        ecmaVersion: 2020,
         sourceType: 'module',
         requireConfigFile: false,
-        babelOptions: {
-            rootMode: 'upward-optional',
+    },
+    overrides: [
+        {
+            files: ['**/*.svelte'],
+            processor: 'svelte3/svelte3',
         },
-    },
-    env: {
-        browser: true,
-        es6: true,
-    },
+    ],
+    plugins: ['svelte3'],
 };

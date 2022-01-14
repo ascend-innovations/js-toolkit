@@ -1,5 +1,16 @@
 # @ascend-innovations/eslint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- 08293c4: Add ESLint support for Svelte
+
+### Patch Changes
+
+- 08293c4: Remove nested yarn workspace config from package.json
+- bce8e5f: Add correct NPM Badge to package READMEs
+
 ## 1.0.2
 
 ### Patch Changes

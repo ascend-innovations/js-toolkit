@@ -7,6 +7,7 @@
     // Auto-run linting on save
     //
     "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
     // Tell the ESLint plugin to run on save
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
@@ -29,7 +30,6 @@
     },
     // show eslint icon at bottom toolbar
     "eslint.alwaysShowStatus": true,
-
     // Stylelint setup with VSCode: https://github.com/stylelint/vscode-stylelint
     "css.validate": false,
     "less.validate": false,

@@ -5,6 +5,7 @@ module.exports = {
         require.resolve('./rules/import'),
         require.resolve('./rules/prettier'),
     ],
+    ignorePatterns: ['*.cjs'],
 
     parser: '@babel/eslint-parser',
 

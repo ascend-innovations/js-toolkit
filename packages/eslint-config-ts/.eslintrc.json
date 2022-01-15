@@ -1,3 +1,17 @@
 {
-    "extends": "./"
+    "extends": "./",
+    "overrides": [
+        {
+            "files": [
+                "**/*.jsx"
+            ],
+            "extends": "./react"
+        },
+        {
+            "files": [
+                "**/*.svelte"
+            ],
+            "extends": "./svelte"
+        }
+    ]
 }

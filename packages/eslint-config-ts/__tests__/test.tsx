@@ -4,5 +4,5 @@
  */
 
 export const test = (text: string) => {
-    return <>{text}</>;
+    return <div>{text}</div>;
 };

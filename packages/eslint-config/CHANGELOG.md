@@ -1,5 +1,15 @@
 # @ascend-innovations/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- a35da35: Remove prettier from configs & make svelte config a bare-bones add-on instead of a full config
+
+### Patch Changes
+
+- a35da35: Refactor Svelte support
+
 ## 1.1.0
 
 ### Minor Changes

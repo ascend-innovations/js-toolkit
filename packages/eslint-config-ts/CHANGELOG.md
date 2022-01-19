@@ -1,5 +1,19 @@
 # @ascend-innovations/eslint-config-ts
 
+## 3.0.0
+
+### Major Changes
+
+- a35da35: Remove prettier from configs & make svelte config a bare-bones add-on instead of a full config
+
+### Patch Changes
+
+- a35da35: Fix bug where parserOptions.project wasn't finding our tests
+- a35da35: Refactor Svelte support
+- Updated dependencies [a35da35]
+- Updated dependencies [a35da35]
+  - @ascend-innovations/eslint-config@2.0.0
+
 ## 2.0.0
 
 ### Minor Changes

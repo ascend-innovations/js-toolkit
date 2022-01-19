@@ -24,61 +24,58 @@
     "homepage": "https://github.com/ascend-innovations/js-toolkit",
     "main": "./index.js",
     "scripts": {
-        "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
-        "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
-        "test:js": "eslint __tests__/test.js",
-        "test:js:react": "eslint __tests__/test.jsx --config ./react.js",
-        "test:ts": "eslint __tests__/test.ts",
-        "test:ts:react": "eslint __tests__/test.tsx --config ./react.js",
-        "test:ts:svelte": "eslint __tests__/test.svelte --config ./svelte.js",
-        "test": "yarn test:js && yarn test:js:react && yarn test:ts && yarn test:ts:react && yarn test:ts:svelte"
+        "lint": "eslint . --ext .js,.ts,.tsx,.svelte",
+        "lint:fix": "yarn lint --fix",
+        "test:js": "eslint __tests__/javascript.js",
+        "test:ts": "eslint __tests__/typescript.ts",
+        "test:ts:react": "eslint __tests__/react-ts.tsx --config ./react.js",
+        "test:ts:svelte": "eslint __tests__/svelte.svelte --config ./svelte.js",
+        "test": "yarn test:js && yarn test:ts && yarn test:ts:react && yarn test:ts:svelte"
     },
     "dependencies": {
         "@ascend-innovations/eslint-config": "^1.1.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.15.5",
-        "@babel/eslint-parser": "^7.15.7",
-        "@babel/preset-react": "^7.14.5",
-        "@typescript-eslint/eslint-plugin": "^4.32.0",
-        "@typescript-eslint/parser": "^4.32.0",
-        "eslint": "^7.32.0",
-        "eslint-config-airbnb": "^18.2.1",
-        "eslint-config-airbnb-base": "^14.2.1",
-        "eslint-config-airbnb-typescript": "^14.0.0",
+        "@babel/core": "^7.16.10",
+        "@babel/eslint-parser": "^7.16.5",
+        "@babel/preset-react": "^7.16.7",
+        "@typescript-eslint/eslint-plugin": "^5.10.0",
+        "@typescript-eslint/parser": "^5.10.0",
+        "eslint": "^8.7.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^16.1.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-html": "^6.2.0",
-        "eslint-plugin-import": "^2.24.2",
-        "eslint-plugin-jest": "^24.5.0",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^25.7.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
         "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.26.1",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "prettier": "^2.4.1",
-        "typescript": "4.4.3",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "prettier": "^2.5.1",
+        "typescript": "4.5.4",
         "eslint-plugin-svelte3": "^3.4.0",
-        "svelte": "^3.46.1"
+        "svelte": "^3.46.2"
     },
     "peerDependencies": {
         "@ascend-innovations/eslint-config": "^1.1.0",
-        "@babel/core": "^7.15.5",
-        "@babel/eslint-parser": "^7.15.7",
-        "@typescript-eslint/eslint-plugin": "^4.32.0",
-        "@typescript-eslint/parser": "^4.32.0",
-        "eslint": "^7.32.0",
-        "eslint-config-airbnb": "^18.2.1",
-        "eslint-config-airbnb-base": "^14.2.1",
-        "eslint-config-airbnb-typescript": "^14.0.0",
-        "eslint-config-prettier": "^8.3.0",
+        "@babel/core": "^7.16.10",
+        "@babel/eslint-parser": "^7.16.5",
+        "@typescript-eslint/eslint-plugin": "^5.10.0",
+        "@typescript-eslint/parser": "^5.10.0",
+        "eslint": "^8.7.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^16.1.0",
         "eslint-plugin-html": "^6.2.0",
-        "eslint-plugin-import": "^2.24.2",
-        "eslint-plugin-jest": "^24.5.0",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.26.1",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "prettier": "^2.4.1",
-        "typescript": "4.4.3"
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^25.7.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "eslint-plugin-svelte3": "^3.4.0",
+        "typescript": "4.5.4"
     },
     "peerDependenciesMeta": {
         "eslint-config-airbnb": {
@@ -95,10 +92,12 @@
         },
         "eslint-plugin-jest": {
             "optional": true
+        },
+        "eslint-plugin-svelte3": {
+            "optional": true
         }
     },
     "volta": {
-        "node": "16.10.0",
-        "yarn": "1.22.11"
+        "extends": "../../package.json"
     }
 }

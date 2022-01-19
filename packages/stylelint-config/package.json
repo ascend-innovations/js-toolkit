@@ -25,25 +25,24 @@
     "main": "./index.js",
     "scripts": {
         "lint": "yarn stylelint **/*.css",
-        "lint:fix": "yarn stylelint **/*.css --fix",
+        "lint:fix": "yarn lint --fix",
         "test": "yarn stylelint __tests__/test.css"
     },
     "dependencies": {
-        "stylelint-config-standard": "^22.0.0",
-        "stylelint-declaration-strict-value": "^1.7.12",
-        "stylelint-order": "^4.1.0"
+        "stylelint-config-standard": "^24.0.0",
+        "stylelint-declaration-strict-value": "^1.8.0",
+        "stylelint-order": "^5.0.0"
     },
     "devDependencies": {
-        "stylelint": "^13.13.1"
+        "stylelint": "^14.2.0"
     },
     "peerDependencies": {
-        "stylelint": "^13.13.1",
-        "stylelint-config-standard": "^22.0.0",
-        "stylelint-declaration-strict-value": "^1.7.12",
-        "stylelint-order": "^4.1.0"
+        "stylelint": "^14.2.0",
+        "stylelint-config-standard": "^24.0.0",
+        "stylelint-declaration-strict-value": "^1.8.0",
+        "stylelint-order": "^5.0.0"
     },
     "volta": {
-        "node": "16.10.0",
-        "yarn": "1.22.11"
+        "extends": "../../package.json"
     }
 }

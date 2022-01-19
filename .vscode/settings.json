@@ -28,6 +28,9 @@
     "[typescriptreact]": {
         "editor.formatOnSave": false
     },
+    "[svelte]": {
+        "editor.formatOnSave": false
+    },
     // show eslint icon at bottom toolbar
     "eslint.alwaysShowStatus": true,
     // Stylelint setup with VSCode: https://github.com/stylelint/vscode-stylelint

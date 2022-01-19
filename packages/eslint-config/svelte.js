@@ -1,21 +1,22 @@
+/**
+ * ! This is not meant to be used as a standalone config, but rather imported
+ * ! after other eslint configs are in place (ie for vanilla javascript)
+ */
 module.exports = {
-    extends: [
-        'airbnb-base',
-        require.resolve('./rules/base'),
-        require.resolve('./rules/import'),
-        require.resolve('./rules/prettier'),
-    ],
-    parser: '@babel/eslint-parser',
-    parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-        requireConfigFile: false,
+  parserOptions: {
+    extraFileExtensions: ['.svelte'],
+  },
+  overrides: [
+    {
+      files: ['**/*.svelte'],
+      processor: 'svelte3/svelte3',
     },
-    overrides: [
-        {
-            files: ['**/*.svelte'],
-            processor: 'svelte3/svelte3',
-        },
-    ],
-    plugins: ['svelte3'],
+  ],
+  plugins: ['svelte3'],
+  ignorePatterns: ['*.cjs'],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
 };

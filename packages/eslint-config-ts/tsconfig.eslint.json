@@ -4,8 +4,8 @@
         "node_modules"
     ],
     "include": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.svelte"
+        "__tests__/typescript.ts",
+        "__tests__/react-ts.tsx",
+        "__tests__/svelte.svelte"
     ],
 }

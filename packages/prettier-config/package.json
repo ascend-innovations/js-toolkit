@@ -1,0 +1,53 @@
+{
+    "name": "@ascend-innovations/prettier-config",
+    "version": "0.0.0",
+    "description": "Ascend's base Prettier config",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ascend-innovations/js-toolkit"
+    },
+    "author": "Ascend Innovations (https://ascend-innovations.com)",
+    "contributors": [
+        {
+            "name": "Chris Hahn",
+            "url": "https://github.com/codingwithchris"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/ascend-innovations/js-toolkit/issues"
+    },
+    "homepage": "https://github.com/ascend-innovations/js-toolkit",
+    "main": "./index.js",
+    "scripts": {
+        "format": "prettier --write **/*.{js,json,jsx}",
+        "format:svelte": "prettier --write --plugin-search-dir=. **/*.svelte",
+        "test:format": "prettier --check '__tests__/*.{js,json,jsx}'",
+        "test:format:svelte": "prettier --check '__tests__/*.svelte'",
+        "test": "yarn test:format && yarn test:format:svelte"
+    },
+    "devDependencies": {
+        "prettier": "^2.4.1",
+        "prettier-plugin-svelte": "^2.6.0"
+    },
+    "peerDependencies": {
+        "prettier": "^2.4.1",
+        "prettier-plugin-svelte": "^2.6.0",
+        "eslint-config-prettier": "^8.3.0"
+    },
+    "peerDependenciesMeta": {
+        "prettier-plugin-svelte": {
+            "optional": true
+        },
+        "eslint-config-prettier": {
+            "optional": true
+        }
+    },
+    "volta": {
+        "extends": "../../package.json"
+    }
+}

@@ -1,6 +1,6 @@
 {
     "name": "@ascend-innovations/eslint-config",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "description": "Ascend's base vanilla JS ESLint config",
     "private": false,
     "publishConfig": {
@@ -87,6 +87,6 @@
         }
     },
     "volta": {
-       "extends": "../../package.json"
+        "extends": "../../package.json"
     }
 }

@@ -10,13 +10,16 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![](https://github.com/ascend-innovations/js-toolkit/workflows/Release/badge.svg)
 
 ## Published Tools
+
 - [@ascend-innovations/eslint-config](https://github.com/ascend-innovations/js-toolkit/blob/main/packages/eslint-config)
 - [@ascend-innovations/eslint-config-ts](https://github.com/ascend-innovations/js-toolkit/tree/main/packages/eslint-config-ts)
-- [@ascend-innovations/stylelint](https://github.com/ascend-innovations/js-toolkit/tree/main/packages/stylelint-config)
+- [@ascend-innovations/prettier-config](https://github.com/ascend-innovations/js-toolkit/tree/main/packages/prettier-config)
+- [@ascend-innovations/stylelint-config](https://github.com/ascend-innovations/js-toolkit/tree/main/packages/stylelint-config)
 
 > More tools will be worked and published in the near future!
 
 ## Repo Toolchain
+
 A list of tooling used in this monorepo along with the reasoning behind it. Look at these like mini ADRs.
 
 ### Node & Package Manager version pinning managed by Volta
@@ -64,6 +67,7 @@ _Linting on commit messages is orchestrated via husky_
 - [View website & docs](https://conventional-changelog.github.io/commitlint/)
 
 ### Package releases and publishing managed with Changesets
+
 Created by Atlassian, Changesets is a tool to manage versioning and changelogs with a focus on multi-package repositories. It's based on the principles of `semver`.
 
 - [View Github repo](https://github.com/atlassian/changesets)

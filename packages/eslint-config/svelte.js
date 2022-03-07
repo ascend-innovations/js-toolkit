@@ -3,6 +3,7 @@
  * ! after other eslint configs are in place (ie for vanilla javascript)
  */
 module.exports = {
+  extends: [require.resolve('./rules/svelte')],
   parserOptions: {
     extraFileExtensions: ['.svelte'],
   },

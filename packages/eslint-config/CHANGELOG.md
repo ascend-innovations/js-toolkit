@@ -1,5 +1,11 @@
 # @ascend-innovations/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- 8212811: Disables rules for svelte that conflict with the eslint import plugin
+
 ## 2.0.0
 
 ### Major Changes

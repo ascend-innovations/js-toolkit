@@ -1,6 +1,6 @@
 {
     "name": "@ascend-innovations/eslint-config-ts",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "description": "Ascend's base vanilla JS w/ Typescript ESLint config",
     "private": false,
     "publishConfig": {
@@ -33,7 +33,7 @@
         "test": "yarn test:js && yarn test:ts && yarn test:ts:react && yarn test:ts:svelte"
     },
     "dependencies": {
-        "@ascend-innovations/eslint-config": "^2.0.0"
+        "@ascend-innovations/eslint-config": "^2.1.0"
     },
     "devDependencies": {
         "@babel/core": "^7.16.10",
@@ -59,7 +59,7 @@
         "svelte": "^3.46.2"
     },
     "peerDependencies": {
-        "@ascend-innovations/eslint-config": "^2.0.0",
+        "@ascend-innovations/eslint-config": "^2.1.0",
         "@babel/core": "^7.16.10",
         "@babel/eslint-parser": "^7.16.5",
         "@typescript-eslint/eslint-plugin": "^5.10.0",

@@ -1,5 +1,12 @@
 # @ascend-innovations/eslint-config-ts
 
+## 4.0.0
+
+### Patch Changes
+
+- Updated dependencies [8212811]
+  - @ascend-innovations/eslint-config@2.1.0
+
 ## 3.0.0
 
 ### Major Changes
